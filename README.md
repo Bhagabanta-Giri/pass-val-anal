@@ -24,7 +24,7 @@ This tool performs two key functions:
 
 ## Technology
 
-- Language: Python 3.x
+- Language: Python 3.12
 - No third-party dependencies
 
 
