@@ -1,3 +1,4 @@
+# Utility function to check if a character is special (non-alphanumeric)
 def is_spl(x):
     if x.isalnum():
         return False
