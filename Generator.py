@@ -1,6 +1,12 @@
 import string
 from random import randint, choice
 
+def is_spl(x):
+    if x.isalnum():
+        return False
+    else:
+        return True
+
 print("Choose Password Type:")
 print("Very Weak: 1")
 print("Weak: 2")
@@ -12,6 +18,9 @@ print("I don't want a password: 0")
 proper = {1, 2, 3, 4, 5}
 ch_chest = []
 password = []
+num = 0
+alpha = 0
+spl = 0
 
 def lvl_input():
     try:
@@ -116,3 +125,16 @@ print("Your Password is:", "".join(password))
 
 if lvl not in proper:
     print("Its empty....Just like your brain!")
+else:
+    for ch in password:
+        if ch.isdigit():
+            num += 1
+        elif ch.isalpha():
+            alpha += 1
+        elif is_spl(ch):
+            spl += 1
+        
+    print("Your Password Statistics:")
+    print("Alphabets:", str(alpha))
+    print("Numbers:", str(num))
+    print("Special Chracters (including spaces):", str(spl))
