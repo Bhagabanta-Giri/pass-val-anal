@@ -52,7 +52,7 @@ for ch in pw:
 print("Your Password Statistics:")
 print("Alphabets:", str(alpha))
 print("Numbers:", str(num))
-print("Special Chracters (including spaces):", str(spl))
+print("Special Characters (including spaces):", str(spl))
 
 
 print("Your Password Rating:")

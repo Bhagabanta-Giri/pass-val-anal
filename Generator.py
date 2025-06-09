@@ -1,5 +1,5 @@
 import string
-from random import randint, choice
+from random import randint, choice, shuffle
 
 def is_spl(x):
     if x.isalnum():
@@ -121,12 +121,14 @@ else:
     for i in range(length):
         password.extend(choice(ch_chest))
 
-print("Your Password is:", "".join(password))
+password_final = shuffle(str("".join(password)))
+
+print("Your Password is:", password_final)
 
 if lvl not in proper:
     print("Its empty....Just like your brain!")
 else:
-    for ch in password:
+    for ch in password_final:
         if ch.isdigit():
             num += 1
         elif ch.isalpha():
@@ -137,4 +139,4 @@ else:
     print("Your Password Statistics:")
     print("Alphabets:", str(alpha))
     print("Numbers:", str(num))
-    print("Special Chracters (including spaces):", str(spl))
+    print("Special Characters (including spaces):", str(spl))
