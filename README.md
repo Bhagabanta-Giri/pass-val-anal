@@ -20,7 +20,7 @@ Built entirely in Python with zero dependencies, it’s perfect for those who wa
 - No sugarcoating—just a clean `True` or `False`.
 - Even I’m not sure why I added this, but hey, it works.
 
-### Validator (`Validator.py`)
+### Password Validator (`Validator.py`)
 - Evaluates passwords using five criteria: length, digits, uppercase, lowercase, and special characters.
 - Grades password strength from *Very Weak* to *Very Strong*.
 - Breaks down character composition—alphabet count, numbers, special characters.
