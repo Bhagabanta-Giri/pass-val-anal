@@ -70,7 +70,7 @@ elif lvl == 2:
             ch_chest.extend(string.ascii_lowercase)
             password.append(choice(string.ascii_lowercase)) 
         ch_chest.extend(string.digits)
-        password.append(choice(string.digits)) #2 here
+        password.append(choice(string.digits)) #2 seeded here
 
 elif lvl == 3:
     req = input("Do you want special characters in your password? [Y/N]").upper()
@@ -83,13 +83,13 @@ elif lvl == 3:
             password.append(choice(string.ascii_uppercase))
         else:
             ch_chest.extend(string.ascii_lowercase)
-            password.append(choice(string.ascii_lowercase)) #2 here
+            password.append(choice(string.ascii_lowercase)) #2 seeded here
     else:
         ch_chest.extend(string.digits)
         password.append(choice(string.digits))
         ch_chest.extend(string.ascii_letters)
         password.append(choice(string.ascii_uppercase))
-        password.append(choice(string.ascii_lowercase)) #3 here
+        password.append(choice(string.ascii_lowercase)) #3 seeded here
 
 elif lvl == 4:
     ch_chest.extend(string.ascii_letters)
@@ -98,7 +98,7 @@ elif lvl == 4:
     password.append(choice(string.ascii_uppercase))
     password.append(choice(string.ascii_lowercase))
     password.append(choice(string.digits))
-    password.append(choice(string.punctuation)) #4 here
+    password.append(choice(string.punctuation)) #4 seeded here
 
 elif lvl == 5:
     length = length_of_pw()
@@ -108,7 +108,7 @@ elif lvl == 5:
     password.append(choice(string.ascii_uppercase))
     password.append(choice(string.ascii_lowercase))
     password.append(choice(string.digits))
-    password.append(choice(string.punctuation)) #4 here
+    password.append(choice(string.punctuation)) #4 seeded here
 
 else:
     ch_chest.extend(" ")
