@@ -68,7 +68,7 @@ elif lvl == 2:
             password.append(choice(string.ascii_uppercase))
         else:
             ch_chest.extend(string.ascii_lowercase)
-            password.append(choice(string.ascii_uppercase)) 
+            password.append(choice(string.ascii_lowercase)) 
         ch_chest.extend(string.digits)
         password.append(choice(string.digits)) #2 here
 
@@ -98,7 +98,7 @@ elif lvl == 4:
     password.append(choice(string.ascii_uppercase))
     password.append(choice(string.ascii_lowercase))
     password.append(choice(string.digits))
-    password.append(choice(string.punctuation))
+    password.append(choice(string.punctuation)) #4 here
 
 elif lvl == 5:
     length = length_of_pw()
@@ -108,20 +108,22 @@ elif lvl == 5:
     password.append(choice(string.ascii_uppercase))
     password.append(choice(string.ascii_lowercase))
     password.append(choice(string.digits))
-    password.append(choice(string.punctuation))
+    password.append(choice(string.punctuation)) #4 here
 
 else:
     ch_chest.extend(" ")
 
 if lvl != 5:
-    range_of_pw = randint(0,3)    
+    range_of_pw = randint(1,2)    
     for i in range(range_of_pw):
         password.extend(choice(ch_chest))
 else:
-    for i in range(length):
+    for i in range(length - 4):
         password.extend(choice(ch_chest))
 
-password_final = shuffle(str("".join(password)))
+shuffle(password)
+
+password_final = "".join(password)
 
 print("Your Password is:", password_final)
 
